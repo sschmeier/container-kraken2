@@ -1,7 +1,7 @@
 # Singularity configuration for kraken2 container
 
 A [Singularity](https://sylabs.io/docs/) definition for kraken2 workflow. 
-The container is available at [https://singularity-hub.org/collections/](https://singularity-hub.org/collections/).
+The container is available at [https://singularity-hub.org/collections/4110](https://singularity-hub.org/collections/4110).
 
 If [Singularity](https://sylabs.io/docs/) is installed locally, the container can be build locally (needs root access):
 
