@@ -1,5 +1,7 @@
 # Singularity configuration for kraken2 container
 
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/4110) 
+
 A [Singularity](https://sylabs.io/docs/) definition for kraken2 workflow. 
 The container is available at [https://singularity-hub.org/collections/4110](https://singularity-hub.org/collections/4110).
 
