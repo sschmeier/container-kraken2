@@ -1,0 +1,24 @@
+Bootstrap: docker
+From: continuumio/miniconda3
+
+%labels
+   AUTHOR s.schmeier@pm.me
+
+%environment
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# This sets global environment variables for anything run within the container
+  export PATH="/opt/conda/bin:$PATH"
+  unset CONDA_DEFAULT_ENV
+  export ANACONDA_HOME=/opt/conda
+
+
+%post
+   export PATH=/opt/conda/bin:$PATH
+   #conda update --yes -q conda 
+   echo "We add conda channels."
+   conda config --add channels defaults
+   conda config --add channels bioconda
+   conda config --add channels conda-forge
+   echo "We install tools."
+   conda install --yes seqtk bracken=2.5 kraken2=2.0.8_beta krona=2.7.1 pandas=0.23.4 numpy=1.15.4 colorama=0.4.0
+   conda clean --index-cache --tarballs --packages --yes
